@@ -23,6 +23,8 @@ class Twitter_Service_UI extends Component {
 
   todelete = () => toast.error("Your tweet is deleted!");
 
+  toUnauthdelete = () => toast.error("You can't delete this tweet!");
+
   searchTweet = (query) => {
     axiosClient.defaults.headers.common["query"] = query;
     axiosClient.get("http://localhost:8080/search").then((res) => {
@@ -51,7 +53,7 @@ class Twitter_Service_UI extends Component {
                 margin: "auto",
                 padding: "3px",
               }}
-              onClick={() => deleteTweet(tweet.id_str, this.todelete)}
+              onClick={() => deleteTweet(tweet.id_str, this.todelete, this.toUnauthdelete)}
             >
               DELETE
             </button>

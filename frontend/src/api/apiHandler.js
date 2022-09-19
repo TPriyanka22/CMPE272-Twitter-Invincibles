@@ -11,7 +11,7 @@ export function postTweet(text, tweetify) {
             });
 }
 
-export function deleteTweet(id, deleteify) {
+export function deleteTweet(id, deleteify, toUnauthdelete) {
     axiosClient.defaults.headers.common["id"] = id;
     console.log('Inside handle delete req_header: ', axiosClient.headers)
     axiosClient.get('/delete')
@@ -22,4 +22,7 @@ export function deleteTweet(id, deleteify) {
                 window.location.href = ('http://localhost:3000');
               }, 3500);
         })
+        .catch(err => {
+            toUnauthdelete()
+        });
 }
