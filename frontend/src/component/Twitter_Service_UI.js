@@ -6,6 +6,10 @@ import Twitterlogo from "./images/Twitterlogo.jpg";
 import axiosClient from "../api/apiClient";
 import { postTweet, deleteTweet } from "../api/apiHandler";
 
+/*
+Priyanka and Poojan has worked on Twitter_Service_UI js changes to render the data on UI
+*/
+
 class Twitter_Service_UI extends Component {
   state = {
     textentered: "",
@@ -35,7 +39,7 @@ class Twitter_Service_UI extends Component {
       }
     });
   };
-  // Loading the tweets using the endpoints - Priyanka
+  
   renderSearchTweets() {
     return this.state.restweets.map((tweet) => {
       return (

@@ -1,3 +1,5 @@
+/*Akhil and Sanketh worked on the backend code to hit the Twitter API and the get required data*/
+
 var express = require('express');
 var cors = require('cors');
 var app = express();
