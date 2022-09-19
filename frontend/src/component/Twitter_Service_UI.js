@@ -33,7 +33,7 @@ class Twitter_Service_UI extends Component {
       }
     });
   };
-
+  // Loading the tweets using the endpoints - Priyanka
   renderSearchTweets() {
     return this.state.restweets.map((tweet) => {
       return (
